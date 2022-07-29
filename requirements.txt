@@ -3,4 +3,4 @@ transformers==4.21.0
 sentencepiece==0.1.96
 keybert==0.6.0
 noisereduce==2.0.1
-SoundFile==0.10.3.post1
+SoundFile==0.8.0
