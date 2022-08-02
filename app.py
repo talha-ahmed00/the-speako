@@ -79,6 +79,8 @@ if audio is not None:
     st.audio(audio, format='audio/wav', start_time=0)
     with open(os.path.join("data",audio.name),"wb") as f: 
       f.write(audio.getbuffer())
+      print('file saved')
+      print(os.path.join("data",audio.name))
     if st.button('Transcription'):
         transcription = main(os.path.join("data",audio.name))
         st.subheader('Transcrption')
