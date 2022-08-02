@@ -27,7 +27,7 @@ def main(audio_file):
   def transcript(tokenizer, model, audio_file):
 
     print('---File Converter---')
-    convert_extension(audio_file)
+    #convert_extension(audio_file)
     
     transcript = ""
 
