@@ -77,7 +77,7 @@ audio = st.file_uploader("Choose a file", type=['wav','flac'])
 if audio is not None:
     print(audio)
     st.audio(audio, format='audio/wav', start_time=0)
-    with open((os.path.join("talha-ahmed00/the-speako/main/data",audio.name),"wb") as f: 
+    with open(os.path.join("talha-ahmed00/the-speako/main/data",audio.name),"wb") as f: 
       f.write(audio.getbuffer())
       print('file saved')
       print(os.path.join("talha-ahmed00/the-speako/main/data",audio.name))
