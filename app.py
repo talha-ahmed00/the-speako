@@ -77,12 +77,12 @@ audio = st.file_uploader("Choose a file", type=['wav','flac'])
 if audio is not None:
     print(audio)
     st.audio(audio, format='audio/wav', start_time=0)
-    with open(os.path.join("data",audio.name),"wb") as f: 
+    with open(os.path.join(audio.name),"wb") as f: 
       f.write(audio.getbuffer())
       print('file saved')
       print(os.path.join("data",audio.name))
     if st.button('Transcription'):
-        transcription = main(os.path.join("data",audio.name))
+        transcription = main(os.path.join(audio.name))
         st.subheader('Transcrption')
         st.write(transcription[0])
         st.subheader('Translation')
